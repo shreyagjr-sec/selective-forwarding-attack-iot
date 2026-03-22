@@ -10,16 +10,16 @@ Selective forwarding attacks exploit this by dropping packets without disrupting
 ## Simulation Preview
 
 ### Network Topology (Normal Operation)
-![Topology](images/topology.png)
+![Topology](images/1_Connected%20IoT%20Network%20with%20Established%20routing%20paths.png)
 
 ### Selective Forwarding Behavior (Packet Drop Evidence)
-![Selective Drop](images/selective-drop-log.png)
+![Selective Drop](images/2_Selective%20forwarding%20dropping.png)
 
 ### Compromised Node in Network
-![Compromised Node](images/compromised-node.png)
+![Compromised Node](images/3_network%20Highlights%20Compromised%20Node.png)
 
 ### Sink Initialization and Routing Activity
-![Sink Init](images/sink-init.png)
+![Sink Init](images/Successful%20Sink%20Initialization.png)
 
 ## Project Overview
 
@@ -42,9 +42,6 @@ This work is explained in detail in a Medium article series:
 
 📖 **Part 1 – Observing a Selective Forwarding Attack**  
 👉 https://medium.com/@shreyagajjar2024/when-an-iot-network-looks-healthy-but-isnt-observing-a-selective-forwarding-attack-a1c1c4882fb0
-
-📖 **Part 2 – Building a Selective Forwarding Scenario**  
-👉 https://medium.com/@shreyagajjar2024/from-observation-to-simulation-building-a-selective-forwarding-scenario-in-contiki-c31f4193a586
 
 ## Repository Structure
 
