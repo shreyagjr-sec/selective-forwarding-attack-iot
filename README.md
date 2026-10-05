@@ -9,13 +9,23 @@ A simulation-based study demonstrating how selective forwarding attacks silently
 - Observed packet loss behavior while maintaining stable routing
 - Analyzed the impact on retransmissions, routing efficiency, and energy consumption
 
-## Tools & Technologies
+## 💻 Technical Stack & Environment
+* **Language:** C (Low-level firmware optimization)
+* **Operating System:** Contiki OS (2.7 / 3.0 / NG)
+* **Simulation Framework:** Cooja Network Simulator
+* **Protocol Target:** RPL (Routing Protocol for Low-Power and Lossy Networks)
+* **Traffic Analysis:** PCAP Capture, Packet Delivery Metrics, ETX (Expected Transmission Count) Analysis
 
-- Contiki OS
-- Cooja Simulator
-- RPL Routing Protocol
-- UDP-based traffic generation
-- IoT sensor nodes
+## 🎯 Key Architectural Components
+1. **Malicious Node Implementation (`/malicious-nodes`):** Contains custom firmware modifications written in C to reproduce covert packet-dropping behavior (such as silently dropping every 3rd packet).
+2. **Network Resilience & Mobility:** Evaluation framework distinguishing between static and dynamic behaviors to analyze network stability under node physical movement.
+3. **Detection Baseline:** Utilizes routing topology changes, Radio Duty Cycle spikes, and drastic Estimated Transmission Count (ETX) updates to isolate and identify misbehaving nodes.
+
+## 📊 Experimental Metrics & Results
+Through multi-node network graphing and simulation control parameters inside Cooja, the project captures distinct operational anomalies:
+* **Telemetry Data:** Successfully traced malicious drops inside the Cooja Mote Output timeline pane matching dropped sequence counts.
+* **Power Profiling:** Traced abnormal Instantaneous Power Consumption indicators (anomalies spiking during path recalculation or active attacks).
+* **Topology Shifts:** Monitored real-time sensor connections showing how surrounding child nodes proactively swap parent routes away from misbehaving node clusters.
 
 ## Medium Articles
 
