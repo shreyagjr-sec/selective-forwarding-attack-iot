@@ -1,52 +1,37 @@
-# Selective Forwarding Attacks in IoT Networks
+# Shreya Gajjar Cybersecurity Portfolio
 
-A simulation-based study demonstrating how selective forwarding attacks silently degrade IoT network reliability while preserving routing stability.
+M.S. Cybersecurity candidate at Wright State University focused on security operations, network traffic analysis, digital forensics, and OT/IoT security.
 
-## Project Overview
+This repository brings together implementation projects and academic research, with a separate folder for each project. It also preserves the original selective-forwarding source files and screenshots.
 
-- Simulated IoT networks using Contiki OS and Cooja
-- Implemented a malicious node that selectively drops packets
-- Observed packet loss behavior while maintaining stable routing
-- Analyzed the impact on retransmissions, routing efficiency, and energy consumption
+## Project Index
 
-## 💻 Technical Stack & Environment
-* **Language:** C (Low-level firmware optimization)
-* **Operating System:** Contiki OS (2.7 / 3.0 / NG)
-* **Simulation Framework:** Cooja Network Simulator
-* **Protocol Target:** RPL (Routing Protocol for Low-Power and Lossy Networks)
-* **Traffic Analysis:** PCAP Capture, Packet Delivery Metrics, ETX (Expected Transmission Count) Analysis
+| Project | Focus | Status |
+| --- | --- | --- |
+| [Real-time OT/IoT threat analysis](projects/ot-iot-threat-analysis/README.md) | Traffic capture, PCAP reconstruction, AI-assisted analysis | In progress |
+| [IoT selective forwarding](projects/selective-forwarding-iot/README.md) | RPL security and Cooja simulation | Simulation study |
+| [Blockchain double spending](projects/blockchain-double-spending/README.md) | Pending-transaction monitoring and peer alerts | Educational prototype |
+| [Post-quantum cryptography](projects/post-quantum-cryptography/README.md) | Algorithm comparison and adoption challenges | Literature review |
+| [Ransomware host impact](projects/ransomware-host-impact/README.md) | Data integrity, accessibility, and resilience | Collaborative research |
 
-## 🎯 Key Architectural Components
-1. **Malicious Node Implementation (`/malicious-nodes`):** Contains custom firmware modifications written in C to reproduce covert packet-dropping behavior (such as silently dropping every 3rd packet).
-2. **Network Resilience & Mobility:** Evaluation framework distinguishing between static and dynamic behaviors to analyze network stability under node physical movement.
-3. **Detection Baseline:** Utilizes routing topology changes, Radio Duty Cycle spikes, and drastic Estimated Transmission Count (ETX) updates to isolate and identify misbehaving nodes.
+## Folder Guide
 
-## 📊 Experimental Metrics & Results
-Through multi-node network graphing and simulation control parameters inside Cooja, the project captures distinct operational anomalies:
-* **Telemetry Data:** Successfully traced malicious drops inside the Cooja Mote Output timeline pane matching dropped sequence counts.
-* **Power Profiling:** Traced abnormal Instantaneous Power Consumption indicators (anomalies spiking during path recalculation or active attacks).
-* **Topology Shifts:** Monitored real-time sensor connections showing how surrounding child nodes proactively swap parent routes away from misbehaving node clusters.
+Each project includes `README.md`, `DESCRIPTION.md`, `images/`, and `code/`. The new code folders contain only an empty `.gitkeep`, ready for later uploads.
 
-## Medium Articles
+The original IoT implementations remain in [`malicious-nodes/`](malicious-nodes/), and original screenshots remain in [`images/`](images/).
 
-📖 **Part 1 – Observing a Selective Forwarding Attack**  
-👉 https://medium.com/@shreyagajjar2024/when-an-iot-network-looks-healthy-but-isnt-observing-a-selective-forwarding-attack-a1c1c4882fb0
+## Featured IoT Writeup
 
-## Repository Structure
+[Observing a selective forwarding attack](https://medium.com/@shreyagajjar2024/when-an-iot-network-looks-healthy-but-isnt-observing-a-selective-forwarding-attack-a1c1c4882fb0)
 
-- `images/` – Simulation screenshots  
-- `simulations/` – Cooja setups  
-- `malicious-node/` – Forwarding logic  
-- `data/` – Metrics  
-- `docs/` – Articles  
+## Technical Interests
 
-## Future Work
+Security monitoring and incident triage • Packet and flow analysis • Digital forensics • IoT routing security • Cryptographic security
 
-- Code-level attack implementation  
-- Power consumption analysis  
-- Static vs dynamic network comparison  
+## Adding Implementation Files
 
-## Author
+Upload code to the matching project folder, then add dependencies, environment versions, and verified run instructions to that project's README. Keep credentials and private keys out of version control.
 
-**Shreya Gajjar**  
-Cybersecurity | IoT Security | Network Security
+## Connect
+
+[LinkedIn](https://linkedin.com/in/shreyagajjarsec) · [GitHub](https://github.com/shreyagjr-sec)
