@@ -4,7 +4,7 @@
 
 An IoT security project by **Shreya Gajjar**, investigating selective packet dropping in a simulated RPL network. I set up the simulation environment, modified node code, ran normal-network, mobility, and malicious-node scenarios, and documented the behavior through Cooja and sensor data collection views.
 
-This repository presents my minor project from my 2024 undergraduate internship/project report. It includes the existing public C sources and the complete project chapter with its ten original figures.
+This repository presents my minor project from my 2024 undergraduate internship/project report. It includes the existing public C sources and the complete project chapter, with its ten original figures in a separate gallery.
 
 ## My contribution
 
@@ -24,36 +24,19 @@ This repository presents my minor project from my 2024 undergraduate internship/
 
 The report describes dropping packets 3, 6, 9, and so on at the malicious node. This configured selection rule does **not** establish a one-third loss rate across the whole network; end-to-end loss depends on traffic paths and other network conditions.
 
-### Normal-network simulation
-
-![Normal RPL network in Cooja](images/report/figure-4-01.png)
-
-*Figure 4.1 — Normal network operation in Cooja.*
-
-### Power observation with mobility
-
-![Power consumption with one mobile node](images/report/figure-4-06.png)
-
-*Figure 4.6 — Instantaneous power consumption in the one-mobile-node scenario. The baseline power figure uses an average-power view, so these screenshots alone do not provide a controlled quantitative comparison.*
-
-### Packet-drop evidence
-
-![Mote output showing a dropped packet](images/report/figure-4-10.png)
-
-*Figure 4.10 — The report identifies this output as showing the sixth packet dropped in the malicious-node scenario.*
-
-**[Read the complete project chapter and view all ten figures](docs/project-report.md)** · **[Browse the figure gallery](docs/figures.md)**
+**[Read the complete project chapter](docs/project-report.md)** · **[View all ten figures](images/figures.md)**
 
 ## Source code and experiment status
 
 | File | What is available |
 | --- | --- |
 | [`malicious-nodes/honest_node.c`](malicious-nodes/honest_node.c) | Baseline UDP client source using Contiki collection components |
-| [`malicious-nodes/udp-malicious-demo.c`](malicious-nodes/udp-malicious-demo.c) | Public demonstration showing the intended packet-selection insertion point; its drop condition is omitted |
-| [`docs/project-report.md`](docs/project-report.md) | Full Chapter 4 text and figures extracted from the supplied report |
-| [`images/report/`](images/report/) | Ten original report screenshots, numbered to match the chapter |
+| [`malicious-nodes/udp-malicious-demo.c`](malicious-nodes/udp-malicious-demo.c) | Public demonstration showing the intended packet-selection insertion point; its actual packet-drop logic was intentionally withheld by the author for safety |
+| [`docs/project-report.md`](docs/project-report.md) | Full Chapter 4 text, with figure captions and a link to the gallery |
+| [`images/figures.md`](images/figures.md) | Single gallery displaying all ten original report figures |
+| [`images/report/`](images/report/) | Image assets used by the gallery |
 
-The original experimental work and the current public source snapshot are distinct: **the published demo does not execute the every-third-packet drop rule**. Both current sources invoke UDP transmission from `collect_common_send()` and ignore incoming application data in `tcpip_handler()`. They do not by themselves establish an implementation that drops transit packets inside RPL's forwarding path.
+The original experimental work and the current public source snapshot are distinct: **I intentionally withheld the actual malicious packet-selection and drop logic from the public code for safety reasons. The published demo therefore does not execute the every-third-packet drop rule.** Both current sources invoke UDP transmission from `collect_common_send()` and ignore incoming application data in `tcpip_handler()`. They do not by themselves establish an implementation that drops transit packets inside RPL's forwarding path.
 
 The existing C files are preserved. The exact Contiki revision, build files, sink source, saved Cooja configuration, mobility configuration, and raw measurement logs are not included in the current repository. Consequently, this is a documented project with partial source availability rather than a complete reproducible experiment package.
 

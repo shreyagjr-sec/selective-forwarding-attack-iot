@@ -1,6 +1,6 @@
 # Project I (Minor): Original Report Extract
 
-> Source: Chapter 4 of Shreya Gajjar’s April 2024 project/internship report. Text is transcribed from the supplied report; heading formatting and figure captions are normalized for GitHub. Other projects and administrative pages are excluded.
+> Source: Chapter 4 of Shreya Gajjar’s April 2024 project/internship report. Text is transcribed from the supplied report; heading formatting and figure captions are normalized for GitHub. Figures are displayed only in the [figure gallery](../images/figures.md). Other projects and administrative pages are excluded.
 
 ## Analyzing Selective Forwarding Attacks in RPL with Contiki OS and Cooja Simulation.
 
@@ -56,38 +56,17 @@ Node Behaviors: The research will examine the effects of selective forwarding at
 
 Mitigation Limitations: Investigates mitigation strategies that can be implemented within the Contiki OS and Cooja simulator, recognizing that real-world applicability may require further exploration.
 
-
-![Figure 4.1](../images/report/figure-4-01.png)
-
 Figure 4.1 Working of Normal Network in Cooja simulation
-
-
-![Figure 4.2](../images/report/figure-4-02.png)
 
 Figure 4.2 Data Collection of Node in Network
 
-
-![Figure 4.3](../images/report/figure-4-03.png)
-
 Figure 4.3 Information status of Nodes
-
-
-![Figure 4.4](../images/report/figure-4-04.png)
 
 Figure 4.4  Sensor Data of Node Connection
 
-
-![Figure 4.5](../images/report/figure-4-05.png)
-
 Figure 4.5 Power Consumption of  Nodes in Normal Network
 
-
-![Figure 4.6](../images/report/figure-4-06.png)
-
 Figure 4.6 Power Consumption with one Dynamic Node ( Node with Mobility)
-
-
-![Figure 4.7](../images/report/figure-4-07.png)
 
 Figure 4.7 Data Collection  with one Dynamic Node ( Node with Mobility)
 
@@ -113,17 +92,8 @@ Explore detection and mitigation strategies for such attacks.
 
 Metrics like packet loss rate and network latency are monitored to assess the attack's effect. The analysis will inform on the network's vulnerability and potential security enhancements.
 
-
-![Figure 4.8](../images/report/figure-4-08.png)
-
 Figure 4.8 Working and Temperature of Nodes ( With Malicious )
 
-
-![Figure 4.9](../images/report/figure-4-09.png)
-
 Figure 4.9  Node Information  ( With Malicious )
-
-
-![Figure 4.10](../images/report/figure-4-10.png)
 
 Figure 4.10 Output panel showing the sixth packet dropped (with malicious node).
